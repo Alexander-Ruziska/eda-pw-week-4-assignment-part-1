@@ -31,7 +31,7 @@ function addNumbers(firstNumber, secondNumber) {
   
   // return firstNumber + secondNumber;
 }
-console.log( '5+3 =', addNumbers(5,3));
+console.log( '5 + 3 =', addNumbers(5,3));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(firstNumber, secondNumber, thirdNumber) {
@@ -39,8 +39,8 @@ let answer = firstNumber * secondNumber * thirdNumber;
 console.log('Numbers are...', firstNumber,'and', secondNumber, 'and', thirdNumber)
 return answer;
 }
-console.log('5*3*4 =', multiplyThree(5,3,4));
-console.log('9*7*3 =', multiplyThree(9,7,3));
+console.log('5 * 3 * 4 =', multiplyThree(5,3,4));
+console.log('9 * 7 * 3 =', multiplyThree(9,7,3));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -70,10 +70,16 @@ console.log('The last item is', getLast());
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
-
-
+function find(value, array = [7, 19, 12, 14]) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  } // <--Ask why this needs to be here and not below return false;.
+      return false;
 }
+console.log('Is 6 in the array?',find(6)); // To output the number selected, 6 in this case, do i need to set variables for each number in array or is there a different way?
+console.log('Is 19 in the array?',find(19));
 
 // ----------------------
 // Stretch Goals
