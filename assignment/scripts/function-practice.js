@@ -87,25 +87,31 @@ console.log('Is 19 in the array?',find(19));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+return string.charAt(0) === letter;
 }
-
+console.log('Is H the first letter of Ham?', isFirstLetter("H", "Ham",));
+console.log('Is b the first letter of Tacos?', isFirstLetter("b", "Tacos"));
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll(array) {
+function sumAll(array = [12,18,54]) {
   let sum = 0;
   // TODO: loop to add items
-
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
   // TODO: return the sum
 }
+return sum;
+}
+console.log(`the sum of 12, 18 and 54 is: ${sumAll()}`);
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
-
+function allPositive(array = [6,-5,12,-18,2]) {
+var positiveNumbers =array.filter(num => num > 0);
+return positiveNumbers;
 }
-
+console.log(`Positive numbers are: ${allPositive()}`);
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
